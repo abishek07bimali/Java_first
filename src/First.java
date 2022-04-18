@@ -133,7 +133,6 @@ class Si{
         int Ab=Integer.parseInt(B);
         int Ac=Integer.parseInt(C);
         float SI=(AA*Ab*Ac)/100;
-//        int Q=Integer.parseInt(SI);
         System.out.println(SI);
 
     }
