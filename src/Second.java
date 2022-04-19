@@ -103,7 +103,7 @@ class question6{
         System.out.println("Enter the breadth: ");
         double B=scanner.nextDouble();
         double Area =A*B;
-        System.out.println("The area of rectangle is "+(int)Area);
+        System.out.println("The area of rectangle is "+ (int)Area);
     }
 }
 class question7{
@@ -252,3 +252,6 @@ class question13{
         System.out.println("the percent scored is "+percent);
     }
 }
+
+
+
