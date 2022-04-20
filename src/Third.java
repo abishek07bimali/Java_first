@@ -15,14 +15,14 @@ public class Third {
 //        System.exit(0);
     }
 }
-class Gui{
+class Gui1{
     public static void main(String[] args) {
         String name="Abishek Bimali";
         JOptionPane.showMessageDialog(null,name);
     }
 }
 
-class gui{
+class Gui{
     public static void main(String[] args) {
         String first=((JOptionPane.showInputDialog("enter your name: " )));
         String third=((JOptionPane.showInputDialog("enter your Address: " )));
@@ -32,7 +32,7 @@ class gui{
                 +third+"\n my phone number is "+Second);
     }
 }
-class marks{
+class Marks{
     public static void main(String[] args) {
         double A=Double.parseDouble((JOptionPane.showInputDialog("Enter the marks of maths: ")));
         double B=Double.parseDouble((JOptionPane.showInputDialog("Enter the marks of English: ")));
@@ -50,7 +50,7 @@ class marks{
 
 
 //    questions for day 3
-class q1{
+class Q1{
     public static void main(String[] args) {
         String first=((JOptionPane.showInputDialog("enter your name: " )));
         String third=((JOptionPane.showInputDialog("enter your Address: " )));
@@ -62,7 +62,7 @@ class q1{
     }
 }
 
-class q2{
+class Q2{
     public static void main(String[] args) {
         int First=Integer.parseInt((JOptionPane.showInputDialog("enter the first number: " )));
         int Second=Integer.parseInt((JOptionPane.showInputDialog("enter the second number: " )));
@@ -73,7 +73,7 @@ class q2{
         JOptionPane.showMessageDialog(null,"The sum of given inputs is "+sum);
     }
 }
-class q3{
+class Q3{
     public static void main(String[] args) {
         String name=((JOptionPane.showInputDialog("enter your name: " )));
         double A=Double.parseDouble((JOptionPane.showInputDialog("Enter the marks of maths: ")));
@@ -100,7 +100,7 @@ class q3{
 
 
 
-class q4{
+class Q4{
     public static void main(String[] args) {
 
         int First = Integer.parseInt((JOptionPane.showInputDialog("enter the first number: ")));
@@ -111,7 +111,7 @@ class q4{
         JOptionPane.showMessageDialog(null,"The product is: "+Pro);
     }
 }
-class q5{
+class Q5{
     public static void main(String[] args) {
         int First = Integer.parseInt((JOptionPane.showInputDialog("enter the first number: ")));
         int Second = Integer.parseInt((JOptionPane.showInputDialog("enter the second number: ")));
@@ -121,7 +121,7 @@ class q5{
         JOptionPane.showMessageDialog(null,"The division is: "+div);
     }
 }
-class q6{
+class Q6{
     public static void main(String[] args) {
         double B=Double.parseDouble((JOptionPane.showInputDialog("Enter the marks of English: ")));
         double C=Double.parseDouble((JOptionPane.showInputDialog("Enter the marks of Science: ")));
@@ -131,7 +131,7 @@ class q6{
 
     }
 }
-class q7{
+class Q7{
     public static void main(String[] args) {
         String A=((JOptionPane.showInputDialog("enter your name: " )));
         int B = Integer.parseInt((JOptionPane.showInputDialog("enter the roll number: ")));
@@ -141,7 +141,7 @@ class q7{
 
     }
 }
-class q8{
+class Q8{
     public static void main(String[] args) {
         float A= Float.parseFloat(JOptionPane.showInputDialog("enter the length of square: "));
         float Area=A*A;
@@ -158,7 +158,7 @@ class q9{
     }
 }
 
-class q10{
+class Q10{
     public static void main(String[] args) {
         String first=((JOptionPane.showInputDialog("enter your First Name: " )));
         String Second=((JOptionPane.showInputDialog("enter your Second Name: " )));
@@ -166,7 +166,7 @@ class q10{
 
     }
 }
-class q11{
+class Q11{
     public static void main(String[] args) {
         int A = Integer.parseInt((JOptionPane.showInputDialog("enter the First number: ")));
         int B = Integer.parseInt((JOptionPane.showInputDialog("enter the Second number: ")));
@@ -177,7 +177,7 @@ class q11{
     }
 }
 
-class q12{
+class Q12{
     public static void main(String[] args) {
         int A = Integer.parseInt((JOptionPane.showInputDialog("enter the First number: ")));
         int B = Integer.parseInt((JOptionPane.showInputDialog("enter the Second number: ")));
@@ -186,7 +186,7 @@ class q12{
     }
 }
 
-class q13{
+class Q13{
     public static void main(String[] args) {
         double B=Double.parseDouble((JOptionPane.showInputDialog("Enter the marks of English: ")));
         double C=Double.parseDouble((JOptionPane.showInputDialog("Enter the marks of Science: ")));
