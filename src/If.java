@@ -94,7 +94,14 @@ class Que5{
 //6. Write a JAVA program to check whether a year is leap year or not.
 class Que6{
     public static void main(String[] args) {
-
+        Scanner input = new Scanner(System.in);
+        System.out.println("Enter year: ");
+        int year = input.nextInt();
+        if ((year%4==0&&year%100!=0)||year%400==0) {
+            System.out.println("Leap Year");
+        } else {
+            System.out.println("Normal Year");
+        }
     }
 }
 
@@ -280,7 +287,21 @@ class Que14{
     }}}
 
 class Que15{
+    public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+        System.out.println("Enter first side of triangle: ");
+        int side1 = input.nextInt();
+        System.out.println("Enter second side of triangle: ");
+        int side2 = input.nextInt();
+        System.out.println("Enter third side of triangle: ");
+        int side3 = input.nextInt();
 
+        if (side1+side2>=side3&&side1-side2<=side3) {
+            System.out.println("Triangle is valid.");
+        } else {
+            System.out.println("Triangle is invalid.");
+        }
+    }
 }
 
 
@@ -307,7 +328,21 @@ class Que16{
 }
 
 class Que17{
+    public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+        System.out.print("Enter CP: ");
+        int cp = input.nextInt();
+        System.out.print("Enter SP:");
+        int sp = input.nextInt();
 
+        if (sp>cp) {
+            System.out.println("Profit");
+        } else if (sp<cp) {
+            System.out.println("Loss");
+        } else {
+            System.out.println("Neither profit nor loss");
+        }
+    }
 }
 
 //18. Write a JAVA program to calculate profit or loss.
@@ -324,6 +359,88 @@ class Que18{
      else{
             System.out.println("You had loss.");
         }
+    }
+}
+
+class Que19{
+    public static void main(String[] args) {
+        String[] subjects = {"Physics", "Chemistry", "Biology", "Maths", "Computer"};
+        Scanner input = new Scanner(System.in);
+        double marks = 0;
+
+        for (String i : subjects) {
+            System.out.print("Enter marks in " + i + ": ");
+            marks = marks + input.nextDouble();
+        }
+
+        double total = marks;
+        double percentage = total / 5;
+        String validity;
+        validity = (percentage>100||percentage<0) ? "\nInvalid Marks!" : "";
+        if (validity.equals("")) {
+            System.out.println("Total Marks: " + total);
+            System.out.println("Percentage: " + percentage);
+            if (percentage >= 90) {
+                System.out.println("Grade: A");
+            } else if (percentage >= 80) {
+                System.out.println("Grade: B");
+            } else if (percentage >= 70) {
+                System.out.println("Grade: C");
+            } else if (percentage >= 60) {
+                System.out.println("Grade: D");
+            } else if (percentage >= 40) {
+                System.out.println("Grade: E");}
+            else {
+                System.out.println("Grade: F");
+            }
+        }else {
+            System.out.println(validity);
+        }
+    }
+}
+
+class Que20{
+    public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+        System.out.print("Enter basic salary: ");
+        int salary = input.nextInt();
+
+        double hra, da, grossSalary;
+
+        if (salary<10000) {
+            hra = 0.2*salary;
+            da = 0.8*salary;
+        } else if (salary<=20000) {
+            hra = 0.25*salary;
+            da = 0.9*salary;
+        } else {
+            hra = 0.3*salary;
+            da=0.95*salary;
+        }
+
+        grossSalary=salary+hra+da;
+
+        System.out.println("Gross salary:  Rs."+grossSalary);
+    }
+}
+class Que21{
+    public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+        System.out.print("Enter total units: ");
+        int units = input.nextInt();
+        double price;
+
+        if (units<=50) {
+            price=units*0.5;
+        } else if (units<=150) {
+            price=25+(units-50)*0.75;
+        } else if (units<=250) {
+            price=25+75+(units-150)*1.2;
+        } else {
+            price=25+75+180+(units-250)*1.5;
+        }
+        double total=price+0.2*price;
+        System.out.println("Total price: "+total);
     }
 }
 
