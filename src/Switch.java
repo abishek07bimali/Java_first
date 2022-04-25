@@ -1,3 +1,5 @@
+import javax.print.attribute.standard.PresentationDirection;
+import java.beans.PropertyEditorSupport;
 import java.util.Scanner;
 //
 class Qu1 {
@@ -29,49 +31,108 @@ class Qu1 {
         }
     }
 }
-//class Qu1{
-//    public static void main(String[] args) {
-//        Scanner z=new Scanner(System.in);
-//        System.out.println("Input Integer");
-//        int a=z.nextInt();
-//        System.out.println("Input Integer");
-//        int b=z.nextInt();
-//        switch(a>b){
-//            case 0:
-//                System.out.println("maximum number " + b);
-//                break;
-//            case(a>b):
-//                System.out.println("maximum number " + a);
-//                break;
-//            default:
-//                System.out.println("Both are equal");
-//        }
-//
-//    }
-//}
+
+class Qu2{
+    public static void main(String[] args) {
+        Scanner z=new Scanner(System.in);
+        System.out.println("Input Integer");
+        int a=z.nextInt();
+        System.out.println("Input Integer");
+        int b=z.nextInt();
+        int result;
+        if (a>b){
+            result=0;
+        }
+        else if (a==b){
+            result =1;
+        }
+        else{
+            result=2;
+        }
+        switch(result){
+            case 0:
+                System.out.println("maximum number " + a);
+                break;
+            case(1):
+                System.out.println("Both are equal");
+                break;
+            case(2):
+                System.out.println("maximum number " + b);
+                break;
+        }
+
+    }
+}
 
 //JAVA Program to find the maximum between three numbers. Using the switch statement.
 
-class Qu2{
+class Qu3{
     public static void main(String[] args)
         {
+            Scanner z=new Scanner(System.in);
+            System.out.println("Input Integer");
+            int a=z.nextInt();
+            System.out.println("Input Integer");
+            int b=z.nextInt();
+            System.out.println("Input Integer");
+            int c=z.nextInt();
+            int result;
+            if (a>b && a>c){
+                result=0;
+            }
+            else if (a==b && b==c){
+                result =1;
+            }
+            else if(b>c && b>a) {
+                result = 3;
+            }
+            else{
+                result=2;
+            }
+            switch(result){
+                case 0:
+                    System.out.println("maximum number " + a);
+                    break;
+                case(1):
+                    System.out.println("All are equal");
+                    break;
+                case(2):
+                    System.out.println("maximum number " + c);
+                    break;
+                case(3):
+                    System.out.println("maximum number " + b);
+                    break;
+
+
+
+        }}}
+
+
+//
+class Qu4{
+    public static void main(String[] args) {
+        Scanner z=new Scanner(System.in);
+        System.out.println("Input Integer");
+        int A=z.nextInt();
+        int result;
+        if ((A%5==0) && (A%11==0)){
+            result=0;
+                    }
+        else{
+            result=1;
+        }
+        switch (result){
+            case 0:
+                System.out.println("divisible by both");
+                break;
+            case 1:
+                System.out.println("not divisible by both");
+                break;
+            }
+        }
 
         }
-}
-//
-//class Qu3{
-//    public static void main(String[] args) {
-//        Scanner z=new Scanner(System.in);
-//        System.out.println("Input Integer");
-//        int A=z.nextInt();
-//        switch (A){
-//            case (A%5==0) && (A%11==0):
-//
-//                System.out.println("");
-//        }
-//        }
-//
-//}
+
 
 
 
@@ -123,19 +184,42 @@ class Qu7 {
             case 'a', 'e', 'i', 'o', 'u' -> System.out.println("The alphabet is a vowel.");
             default -> System.out.println("The alphabet is a consonant.");
         }
-    }
-}
+    }}
 
 class Qu8{
+        public static void main(String[] args) {
+            Scanner input= new Scanner(System.in);
+            System.out.println("Enter the character ");
+            char char1 ;
+            char1= input.next().charAt(0);
+            switch (char1) {
+                case '0', '1', '2', '3', '4', '5', '6', '7', '8', '9' -> System.out.println("The character is a digit.");
+                case 'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z' -> System.out.println("The character is an alphabet.");
+                default -> System.out.println("The character is a special character");
+            }}}
+
+
+
+
+//JAVA Program to check whether a character is an uppercase or lowercase alphabet. Using the
+//switch statement.
+class Qu9{
     public static void main(String[] args) {
         Scanner input= new Scanner(System.in);
         System.out.println("Enter the character ");
         char char1 ;
         char1= input.next().charAt(0);
+//        }
         switch (char1) {
-            case '0', '1', '2', '3', '4', '5', '6', '7', '8', '9' -> System.out.println("The character is a digit.");
-            case 'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z' -> System.out.println("The character is an alphabet.");
-            default -> System.out.println("The character is a special character");
+            case 'A','B','C','D','E','F','G','H','I','J','K','M','N','O','P','Q','R',
+                    'S','T','U','V','W','X','Y','Z' :
+                System.out.println("The character is an uppercase alphabet.");
+            break;
+            case 'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n',
+                    'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z' :
+                    System.out.println("The character is lower alphabet.");
+            default :
+                System.out.println("The character is a special character");
         }
     }
 }
@@ -231,25 +315,150 @@ class Qu10 {
     }
 }
 
-class Qu17 {
+//12. JAVA Program to count the total number of notes in a given amount. Using the switch
+//statement.
+class Qu12{
     public static void main(String[] args) {
-        Scanner input= new Scanner(System.in);
-        int a1,a2,a3,sum;
-        System.out.print("Enter the angle ");
-        a1 = input.nextInt();
-        System.out.print("Enter the angle ");
-        a2 = input.nextInt();
-        System.out.print("Enter the angle ");
-        a3 = input.nextInt();
-        sum=a1+a2+a3;
-        switch (sum) {
-            case 180 -> System.out.println("The triangle is valid.");
-            default -> System.out.println("The triangle is not valid.");
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("enter the total amount: ");
+        int A=scanner.nextInt();
+        int B=5;
+        int result;
+        if (A%B==0){
+          result=0;
+        }
+        else{
+            result=1;
+        }
+    switch (result){
+        case 0:
+            float total=A/B;
+            System.out.println(total);
+            break;
+        case 1:
+            System.out.println("invalid");
+    }
+    }}
+
+//JAVA Program to take the value from the user as input all sides of a triangle and check whether
+//the triangle is valid or not. Using switch statement.
+
+class Qu13{
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("enter the angle: ");
+        int angel1 = scanner.nextInt();
+        System.out.println("enter the angle: ");
+        int angle2 = scanner.nextInt();
+        System.out.println("enter the angle: ");
+        int angle3 = scanner.nextInt();
+        int sum=angel1+angle3+angle2;
+        int result;
+        if (sum==180) {
+        result=0;
+        }
+        else{
+        result=1;
+        }
+        switch (result){
+            case 0:
+                System.out.println("The triangle is valid.");
+            case 1:
+                System.out.println("the triangle is not valid.");
+        }}}
+
+//JAVA Program to check whether the triangle is an equilateral, isosceles or scalene triangle.
+//Using switch statement
+class Qu14{
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("enter the side: ");
+        int side1 = scanner.nextInt();
+        System.out.println("enter the side: ");
+        int side2 = scanner.nextInt();
+        System.out.println("enter the side: ");
+        int side3 = scanner.nextInt();
+        int result;
+        if ((side1 == side2) && (side3 == side2)) {
+            result=0;
+        }
+        else if ((side1 == side2) || (side3 == side2)) {
+            result=1;
+        }
+        else{
+            result=2;
+        }
+        switch (result) {
+            case 0 -> System.out.println("equilateral");
+            case 1 -> System.out.println("isosceles");
+            case 2 -> System.out.println("Scalene");
+        }}}
+
+//JAVA Program to find all the roots of a quadratic equation. Using switch statement
+class Qu15{
+    public static void main(String[] args) {
+        Scanner scanner=new Scanner(System.in);
+        System.out.println("Enter the a");
+        float a=scanner.nextFloat();
+        System.out.println("Enter the b");
+        float b= scanner.nextFloat();
+        System.out.println("Enter the c");
+        float c= scanner.nextFloat();
+        double determinant=(b*b)-(4*a*c);
+        double sqrt=Math.sqrt(determinant);
+//        System.out.println(determinant);
+        double firstRoot=(-b + sqrt)/(2*a);
+        double secondRoot=(-b + sqrt)/(2*a);
+        int result;
+        if (determinant>0){
+            result=0;
+        }
+        else if(determinant==0){
+            result=1;
+            }
+        else{
+            result=2;
+        }
+        switch(result){
+            case 0:
+                System.out.println("first root : "+firstRoot+" and "+secondRoot);
+                break;
+            case 1:
+                System.out.println(firstRoot);
+                break;
+        }
+}}
+
+
+//16. JAVA Program to calculate profit or loss. Using switch statement.
+class Qu16{
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("enter the Cost price: ");
+        int cp = scanner.nextInt();
+        System.out.println("enter the selling price: ");
+        int sp = scanner.nextInt();
+        int result;
+        if (sp > cp) {
+            result=0;
+        }
+        else{
+            result=1;
+        }
+        switch (result){
+            case 0:
+                System.out.println("you had profit.");
+            case 1:
+                System.out.println("You had loss.");
         }
     }
 }
 
-class Qu18 {
+// JAVA Program to take the value from the user as input the basic salary of an employee and
+//calculate its Gross salary according to the following: Basic Salary <= 10000: HRA = 20%, DA =
+//80%………………………………..Basic Salary <= 20000 : HRA = 25%, DA =
+//90%………………………………Basic Salary > 20000 : HRA = 30%, DA = 95%
+class Qu17 {
     public static void main(String[] args) {
         Scanner input = new Scanner(System.in);
         System.out.print("Enter basic salary: ");
@@ -275,8 +484,12 @@ class Qu18 {
         System.out.println("Gross salary:  Rs."+grossSalary);
     }
 }
-
-class Qu19 {
+//8. JAVA Program to take the value from the user as input electricity unit charges and calculate
+//total electricity bill according to the given condition: For the first 50 units Rs.
+//0.50/unit………….For the next 100 units Rs. 0.75/unit…..For the next 100 units Rs. 1.20/unit
+//……………For unit above 250 Rs. 1.50/unit………An additional surcharge of 20% is added to
+//the bill…….Using the switch statement
+class Qu18{
     public static void main(String[] args) {
         Scanner input = new Scanner(System.in);
         System.out.print("Enter total units: ");
@@ -295,7 +508,9 @@ class Qu19 {
     }
 }
 
-class Qu21 {
+//Program to take the hours and minutes as input by the user and the show that whether it is AM
+//or PM by using the switch statement.
+class Qu19 {
     public static void main(String[] args) {
         Scanner input = new Scanner(System.in);
         System.out.print("Enter hours: ");
@@ -311,22 +526,60 @@ class Qu21 {
     }
 }
 
-class Qu23 {
-    public static void main(String[] args) {
-        Scanner input = new Scanner(System.in);
-        System.out.print("Enter a number: ");
-        int num = input.nextInt();
-        System.out.println(-num);
+//20. Program to convert a positive number into negative number and negative number into a positive
+//number using switch statement
+class Qu20 {
+    public static void main(String[] args){
+        Scanner scanner = new Scanner(System.in);
+        System.out.print("Enter number: ");
+        int positiveVal = scanner.nextInt();
+        int negativeVal = (~(positiveVal - 1));
+        int positiveVal1= ~(~(negativeVal));
+        int result;
+        if (positiveVal<=0){
+            result=0;
+        }
+        else{
+            result=1;
+        }
+        switch (result){
+            case 0:
+                System.out.println("negative to positive "+positiveVal1);
+                break;
+            case 1:
+                System.out.println("positive to negative "+negativeVal);
+        }
+
+
     }
 }
-
-class Qu24 {
+//Write a program to swap the values of two numbers if the values of both variables are not the
+//same using a switch statement.
+class Qu21{
     public static void main(String[] args) {
-        Scanner demo= new Scanner(System.in);
-        int num,x;
+        int a,b;
+        a=2;
+        b=3;
+        int temp = a;
+        a = b;
+        b = temp;
+        switch (a) {
+            case 0:
+                System.out.println(a);
+                break;
+
+        }}}
+
+
+
+//22. Program to Convert even number into its upper nearest odd number Switch Statement.
+class Qu22 {
+    public static void main(String[] args) {
+        Scanner demo = new Scanner(System.in);
+        int num, x;
         System.out.print("Enter the number ");
-        num= demo.nextInt();
-        x= num%2;
+        num = demo.nextInt();
+        x = num % 2;
         switch (x) {
             case 0 -> num += 1;
             default -> {

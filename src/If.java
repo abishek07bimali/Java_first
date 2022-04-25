@@ -157,7 +157,7 @@ class Que9{
         if((character>='a' && character<='z') || (character>='A' && character<='Z')){
             System.out.print(character + " is an alphabet.");
         }
-        else if (character>0 && character<0 && character==0){
+        else if (character>0 || character<0 ||character==0){
             System.out.print(character + " is an digit.");
         }
         else{
@@ -213,49 +213,54 @@ class Que11{
             }
             else{
                 System.out.println("default");
-            }
-        }
-}
+            }}}
 
 //12. Write a JAVA program to input month number and print number of days in that month.
 class Que12{
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
-        System.out.println("enter the digit: ");
+        System.out.println("enter the months: ");
         int day=scanner.nextInt();
+        System.out.println("enter the year: ");
+        int year=scanner.nextInt();
+
         if (day==1){
-            System.out.println("Baisakh has 30 days");
+            System.out.println("January has 31 days");
         }
         else if (day==2){
-            System.out.println("jestha has 30 days");
-        }
+            if ((year%4==0&&year%100!=0)||year%400==0) {
+                System.out.println("Feb has 29 days");
+            }
+            else {
+            System.out.println("Feb has 28 days");
+        }}
         else if (day==3){
-            System.out.println("Aasar has 30 days");
+            System.out.println("March has 31 days");
         }
         else if (day==4){
-            System.out.println("Shrawan has 30 days");
+            System.out.println("April has 30 days");
         }
         else if (day==5){
-            System.out.println("Bhadra has 30 days");
+            System.out.println("May has 31 days");
         }
         else if (day==6){
-            System.out.println("Ashwoj has 30 days");
+            System.out.println("June has 30 days");
         }
         else if (day==7){
-            System.out.println("Kartik has 30 days");
+            System.out.println("July has 31 days");
         }
         else if (day==8){
-            System.out.println("Mangsir has 30 days");
+            System.out.println("August has 31 days");
         }
         else if (day==9){
-            System.out.println("Poush has 30 days");
+            System.out.println("September has 30 days");
         }
         else if (day==10){
-            System.out.println("Magh has 30 days");
+            System.out.println("October has 31 days");
         } else if (day==11){
-            System.out.println("Falgun has 30 days");
+            System.out.println("November has 30 days");
         } else if (day==12){
-            System.out.println("Chaitra has 30 days");
+            System.out.println("December has 31 days");
         }
         else{
             System.out.println("default");
@@ -265,6 +270,22 @@ class Que12{
 
 //13. Write a JAVA program to count total number of notes in given amount.
 class Que13{
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("enter the total amount: ");
+        int A=scanner.nextInt();
+//        int B=5;
+        System.out.println("enter the amount: ");
+        float B=scanner.nextFloat();
+         if (A%B==0){
+             float total=A/B;
+             System.out.println(total);
+         }
+         else{
+             System.out.println("invalid");
+         }
+
+    }
 
 }
 
@@ -296,7 +317,7 @@ class Que15{
         System.out.println("Enter third side of triangle: ");
         int side3 = input.nextInt();
 
-        if (side1+side2>=side3&&side1-side2<=side3) {
+        if (side1+side2>=side3 && side1-side2<=side3) {
             System.out.println("Triangle is valid.");
         } else {
             System.out.println("Triangle is invalid.");
@@ -329,19 +350,25 @@ class Que16{
 
 class Que17{
     public static void main(String[] args) {
-        Scanner input = new Scanner(System.in);
-        System.out.print("Enter CP: ");
-        int cp = input.nextInt();
-        System.out.print("Enter SP:");
-        int sp = input.nextInt();
+        Scanner scanner=new Scanner(System.in);
+        System.out.println("Enter the a");
+        float a=scanner.nextFloat();
+        System.out.println("Enter the b");
+        float b= scanner.nextFloat();
+        System.out.println("Enter the c");
+        float c= scanner.nextFloat();
+        double determinant=(b*b)-(4*a*c);
+        double sqrt=Math.sqrt(determinant);
+        System.out.println(determinant);
 
-        if (sp>cp) {
-            System.out.println("Profit");
-        } else if (sp<cp) {
-            System.out.println("Loss");
-        } else {
-            System.out.println("Neither profit nor loss");
+
+        double firstRoot=(-b + sqrt)/(2*a);
+        double secondRoot=(-b + sqrt)/(2*a);
+        if (determinant>0){
+            System.out.println("first root : "+firstRoot+" and "+secondRoot);
         }
+        else if(determinant==0);
+        System.out.println(firstRoot);
     }
 }
 
@@ -398,7 +425,12 @@ class Que19{
         }
     }
 }
-
+/*Write a JAVA program to input basic salary of an employee and calculate its Gross salary
+according to following:
+Basic Salary <= 10000 : HRA = 20%, DA = 80%
+Basic Salary <= 20000 : HRA = 25%, DA = 90%
+Basic Salary > 20000 : HRA = 30%, DA = 95%
+*/
 class Que20{
     public static void main(String[] args) {
         Scanner input = new Scanner(System.in);
@@ -423,6 +455,19 @@ class Que20{
         System.out.println("Gross salary:  Rs."+grossSalary);
     }
 }
+
+
+
+
+/*Write a JAVA program to input electricity unit charges and calculate total electricity bill
+according to the given condition:
+For first 50 units Rs. 0.50/unit
+For next 100 units Rs. 0.75/unit
+For next 100 units Rs. 1.20/unit
+For unit above 250 Rs. 1.50/unit
+An additional surcharge of 20% is added to the bill */
+
+
 class Que21{
     public static void main(String[] args) {
         Scanner input = new Scanner(System.in);
@@ -437,7 +482,7 @@ class Que21{
         } else if (units<=250) {
             price=25+75+(units-150)*1.2;
         } else {
-            price=25+75+180+(units-250)*1.5;
+            price=25+75+120+(units-250)*1.5;
         }
         double total=price+0.2*price;
         System.out.println("Total price: "+total);

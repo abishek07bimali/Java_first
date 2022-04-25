@@ -69,3 +69,21 @@ class voterid{
         }
     }
 }
+
+
+//
+class Even {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("enter the digit: ");
+        int day=scanner.nextInt();
+        switch (day%2){
+            case(0):
+                System.out.println("even");
+                break;
+            default:
+                System.out.println("odd");
+                break;
+        }
+
+    }}
