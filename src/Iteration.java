@@ -224,7 +224,8 @@ class While5{
             else{
                 System.out.println("not");
 
-            }}}
+            }
+    }}
 
 
 
